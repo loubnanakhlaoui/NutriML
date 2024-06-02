@@ -6,11 +6,4 @@ __pycache__/
 
 # Ignore data files
 *.csv
-*.data
-*.log
 
-# Ignore OS-specific files
-.DS_Store
-
-# Ignore other IDE-specific files
-.vscode/
