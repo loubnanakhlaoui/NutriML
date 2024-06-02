@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Calorie Estimator</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload a Food Image</h1>
+        <form method="post" enctype="multipart/form-data">
+            <label for="file-upload" class="custom-file-upload" id="file-label">
+                Choose an image <!-- Modifier le texte ici -->
+            </label>
+            <input id="file-upload" type="file" name="file" onchange="updateFileName()">
+            <input id="upload-button" type="submit" value="Upload" disabled>
+        </form>
+        {% if fruit %}
+        <h2>Predicted Food: {{ fruit }}</h2>
+        {% if nutrition_info %}
+        <h3>Nutrition Information:</h3>
+        <ul>
+            <li>Name: {{ nutrition_info[0]['name'] }}</li>
+            <li>Calories: {{ nutrition_info[0]['calories'] }}</li>
+            <li>Serving Size: {{ nutrition_info[0]['serving_size_g'] }} g</li>
+            <li>Total Fat: {{ nutrition_info[0]['fat_total_g'] }} g</li>
+            <li>Saturated Fat: {{ nutrition_info[0]['fat_saturated_g'] }} g</li>
+            <li>Protein: {{ nutrition_info[0]['protein_g'] }} g</li>
+            <li>Sodium: {{ nutrition_info[0]['sodium_mg'] }} mg</li>
+            <li>Potassium: {{ nutrition_info[0]['potassium_mg'] }} mg</li>
+            <li>Cholesterol: {{ nutrition_info[0]['cholesterol_mg'] }} mg</li>
+            <li>Total Carbohydrates: {{ nutrition_info[0]['carbohydrates_total_g'] }} g</li>
+            <li>Fiber: {{ nutrition_info[0]['fiber_g'] }} g</li>
+            <li>Sugar: {{ nutrition_info[0]['sugar_g'] }} g</li>
+        </ul>
+        {% endif %}
+        {% endif %}
+    </div>
+
+    <script>
+        function updateFileName() {
+            var input = document.getElementById('file-upload');
+            var label = document.getElementById('file-label');
+            if (input.files.length > 0) {
+                label.textContent = input.files[0].name;
+                document.getElementById('upload-button').disabled = false;
+            } else {
+                label.textContent = 'Choose an image';
+                document.getElementById('upload-button').disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>
