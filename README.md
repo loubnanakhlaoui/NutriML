@@ -1,4 +1,5 @@
-The food recognition and calorie estimation model based on images, developed using TensorFlow and Keras. Here's an overview of the key steps in the project:
+The food recognition and calorie estimation model based on images, developed using TensorFlow and Keras.
+The key steps in the project:
 
 ### **1. Data Download and Preparation**
 - **Data Source:** Downloading a dataset of fruits and vegetables images from Kaggle.
@@ -26,7 +27,6 @@ The food recognition and calorie estimation model based on images, developed usi
 ### **5. Challenges**
 - Limited resources (CPU/GPU) and the challenge of finding suitable datasets.
 
-If you need more details on any specific part, such as the model or predictions, feel free to ask!
 <img width="497" alt="image" src="https://github.com/user-attachments/assets/aa34b188-b69e-40c7-a6ac-ced5be1bf0b4">
 
 Choosing image : <img width="545" alt="image" src="https://github.com/user-attachments/assets/4dc22f4a-943b-480f-a7a3-0a59f2ea6750">
